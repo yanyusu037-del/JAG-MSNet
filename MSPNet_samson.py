@@ -23,7 +23,7 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 # os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 # Load DATA
-data = sio.loadmat("samson_dataset.mat")
+data = sio.loadmat("data/samson_dataset.mat")
 
 abundance_GT = torch.from_numpy(data["A"])  # true abundance
 original_HSI = torch.from_numpy(data["Y"])  # mixed abundance

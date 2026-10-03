@@ -35,7 +35,7 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 # os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 # Load DATA
-data = sio.loadmat("urban5.mat")
+data = sio.loadmat("data/urban.mat")
 
 abundance_GT = torch.from_numpy(data["A"])  # true abundance
 original_HSI = torch.from_numpy(data["Y"])  # mixed abundance
